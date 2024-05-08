@@ -12,26 +12,29 @@
 
 <body>
 
-    <header style="height: 100px;" class="text-bg-dark">
-        <nav class="navbar navbar-expand-lg text-bg-dark">
-          <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="/chi-siamo">About</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
+  <header style="height: 100px;" class="text-bg-dark">
+    <nav class="navbar navbar-expand-lg text-bg-dark">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="{{ route('home') }}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="{{ route('about') }}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="{{ route('products') }}">Prodotti</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
   <main class="text-center" style="height: calc(100vh - 200px); background-color: darkcyan;">
     <h1 class="py-5">{{ $title }}</h1>
-    <h3 class="text-uppercase"><strong class="text-capitalize">Argument:</strong> {{$argument}} </h3>
+    <h3 class="text-uppercase"><strong class="text-capitalize">Argument:</strong> {{ $argument }} </h3>
   </main>
 
   <footer style="height: 100px;" class="text-uppercase text-bg-dark d-flex align-items-center justify-content-center ">

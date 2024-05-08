@@ -24,3 +24,8 @@ Route::get('/chi-siamo', function () {
     $surname = 'D\'Amato';
     return view('about', compact('title', 'name', 'surname'));
 })->name('about');
+
+Route::get('/prodotti', function () {
+    $data = ['title' => 'Prodotti', 'products' => ['Mele', 'Pere', 'Banane', 'Kiwi']];
+    return view('products', $data);
+})->name('products');

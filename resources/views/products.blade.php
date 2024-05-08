@@ -32,9 +32,19 @@
         </nav>
       </header>
 
-  <main class="text-center" style="height: calc(100vh - 200px); background-color: crimson;">
+  <main class="text-center" style="height: calc(100vh - 200px); background-color: yellow;">
     <h1 class="py-5">{{ $title }}</h1>
-    <h3><strong>Author:</strong> {{ $name }} {{ $surname }}</h3>
+    <div class="container">
+      <div class="row row-cols-2">
+
+        <?php foreach ($products as $product): ?>
+        <div class="col">
+          <h5 class="bg-success p-3">{{ $product }}</h5>
+        </div>
+        <?php endforeach ?>
+
+      </div>
+    </div>
   </main>
 
   <footer style="height: 100px;" class="text-uppercase text-bg-dark d-flex align-items-center justify-content-center ">
