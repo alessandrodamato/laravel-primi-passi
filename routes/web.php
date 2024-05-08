@@ -14,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $data = ['title' => 'Home Page'];
+    $data = ['title' => 'Home Page', 'argument' => 'laravel'];
     return view('home', $data);
 })->name('home');
+
+Route::get('/chi-siamo', function () {
+    $title = 'About';
+    $name = 'Alessandro';
+    $surname = 'D\'Amato';
+    return view('about', compact('title', 'name', 'surname'));
+})->name('about');
